@@ -1,20 +1,26 @@
+# frozen_string_literal: false
+
 require 'fizzbuzz'
 
 describe 'fizzbuzz' do
-  it 'returns "fizz" when passed 3' do
-      expect(fizzbuzz(3)).to eq 'fizz'
-  end
-  it 'returns "buzz" when passed 5' do
+  context 'given a multiple of 5' do
+    it 'returns buzz' do
       expect(fizzbuzz(5)).to eq 'buzz'
+    end
   end
-  it 'returns "fizz" when passed multiple of 3' do
-      expect(fizzbuzz(number % 3 == 0)).to eq "fizz" 
+  context 'given a multiple of 3' do
+    it 'returns fizz' do
+      expect(fizzbuzz(3)).to eq 'fizz'
+    end
+  end
+  context 'given a multiple of 3 and 5' do
+    it 'returns fizzbuzz' do
+      expect(fizzbuzz(15)).to eq 'fizzbuzz'
+    end
   end
 end
 
-=begin
-- multiples of 3 puts "fizz"
-- multiples of 5 puts "buzz"
-- multiples of both puts "fizzbuzz"
-- else puts number
-=end
+# - multiples of 3 puts "fizz"
+# - multiples of 5 puts "buzz"
+# - multiples of both puts "fizzbuzz"
+# - else puts number
