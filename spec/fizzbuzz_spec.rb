@@ -24,8 +24,3 @@ describe 'fizzbuzz' do
     expect(fizzbuzz(31)).to eq 31
   end
 end
-
-# - multiples of 3 puts "fizz"
-# - multiples of 5 puts "buzz"
-# - multiples of both puts "fizzbuzz"
-# - else puts number

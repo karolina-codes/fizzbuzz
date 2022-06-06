@@ -1,11 +1,13 @@
 def fizzbuzz(number) # rubocop:disable Metrics/MethodLength
-   if (number % 3).zero? && (number % 5).zero?
+fizz = (number % 3).zero?
+buzz = (number % 5).zero?
+   if fizz && buzz
      'fizzbuzz'
-   elsif (number % 3).zero?
+   elsif fizz
      'fizz'
-   elsif (number % 5).zero?
+   elsif buzz
      'buzz'
    else
-     number
-   end
+       number
+  end
 end
